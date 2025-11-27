@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil do Usuário - Interface Bitcoin</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.2.0"></script>
+    <link rel="stylesheet" href="../styles/criarPerfil.css">
+    <script src="../scripts/criarPerfil.js"></script>
+
+</head>
+
+<body>
+    <header class="hd1">
+        <div class="logo">
+            <img class="img1" src="../images/Bitcoin-Logo.png" alt="Logo Bitcoin">
+        </div>
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+            ☰
+        </button>
+        <nav class="menu">
+            <a href="../index.html">Home</a>
+            <a href="contato.html">Contato</a>
+            <a href="comoUsar.html">Como usar</a>
+            <a href="login.html" id="loginLink">Login</a>
+            <a href="#" id="logoutButton" style="display: none;">Sair</a>
+        </nav>
+    </header>
+
+    <main class="mn1">
+        <div class="profile-container">
+            <img src="../images/BENEFICIOS-SEM-PERFIL-DE-MOTORISTA-279x300.webp" alt="Avatar do Usuário"
+                class="profile-avatar" id="profileAvatar">
+            <h2 class="profile-title">Meu Perfil</h2>
+
+            <div class="profile-info">
+                <p><strong>Email:</strong> <span id="userEmail"></span></p>
+            </div>
+
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="username">Nome de Usuário:</label>
+                    <input type="text" id="username" name="username" placeholder="Seu nome de usuário">
+                </div>
+
+                <button type="submit" class="save-btn">Salvar Alterações</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>

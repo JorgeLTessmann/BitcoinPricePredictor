@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interface Bitcoin</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.2.0"></script>
+    <script src="scripts/index.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+
+</head>
+
+<body>
+    <div id="welcome" class="welcome-screen" style="display: none;">
+        <img src="images/Bitcoin-Logo.png" alt="Logo Bitcoin" />
+        <p>Bem-vindo ao Satoshi's Log. Deseja fazer login ou continuar como visitante?</p>
+        <div class="welcome-buttons">
+            <button onclick="location.href='pages/login.html'">Fazer login</button>
+            <button onclick="continuarComoVisitante()">Continuar sem login</button>
+        </div>
+    </div>
+
+    <header class="hd1">
+        <div class="logo">
+            <img class="img1" src="images/Bitcoin-Logo.png" alt="Logo Bitcoin">
+        </div>
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+            ☰
+        </button>
+        <nav class="menu">
+            <a href="pages/contato.html">Contato</a>
+            <a href="pages/comoUsar.html">Como usar</a>
+            <a href="#" id="perfil-link">Perfil</a>
+        </nav>
+    </header>
+
+    <main class="mn1">
+        <div class="analise-container">
+            <h2>Análise do Bitcoin</h2>
+
+            <div class="price-display">
+                <p>Preço atual: <strong id="current-price">--</strong></p>
+                <p>Última atualização: <span id="last-update">--</span></p>
+            </div>
+
+            <div class="trend-container">
+                <div id="trend-indicator" class="trend-indicator estavel">Carregando análise...</div>
+                <p id="trend-description" class="trend-description">Aguarde enquanto processamos a variação do preço do
+                    Bitcoin...</p>
+            </div>
+
+            <div class="forecast-container">
+                <div id="forecast-indicator" class="trend-indicator estavel">Carregando previsão...</div>
+                <p id="forecast-description" class="forecast-description">Aguarde enquanto processamos a previsão de
+                    curto prazo...</p>
+            </div>
+        </div>
+
+        <div class="GRF">
+            <canvas id="bitcoinChart"></canvas>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header.hd1 {
+    background-color: #111;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 40px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main.mn1 {
+    padding: 20px;
+}
+
+.analise-container {
+    background: #222;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.price-display p,
+.trend-description,
+.forecast-description {
+    margin: 8px 0;
+}
+
+.trend-indicator {
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.trend-indicator.para-alta {
+    background-color: #14532d;
+    color: #86efac;
+}
+
+.trend-indicator.para-baixa {
+    background-color: #7f1d1d;
+    color: #fca5a5;
+}
+
+.trend-indicator.estavel {
+    background-color: #3f3f46;
+    color: #e4e4e7;
+}
+
+.GRF {
+    background: #111;
+    border-radius: 12px;
+    padding: 10px;
+    height: 400px;
+}
+
+
+.welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000cc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-screen img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.welcome-screen p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.welcome-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.welcome-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #f7931a;
+    color: white;
+}
+
+.welcome-buttons button:hover {
+    background-color: #e67e00;
+}
+
+.mn1 {
+    justify-content: center;
+    padding: 20px;
+}
+
+.analise-texto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+
+menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 4px;
+    will-change: transform, background-color;
+}
+
+.menu a:hover {
+    background-color: rgb(255, 177, 32);
+    color: black;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 15px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        transform: translateY(-150%);
+        transition: transform 0.4s ease-out;
+        z-index: 15;
+        display: none;
+    }
+
+    .menu.active {
+        transform: translateY(0);
+        display: flex;
+    }
+
+    .menu a {
+        width: 80%;
+        text-align: center;
+        padding: 12px 0;
+        border-radius: 5px;
+    }
+
+    .hexp {
+        margin-bottom: 20px;
+    }
+
+    .insta a {
+        padding: 10px 20px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        top: 60px;
+    }
+
+    .insta a {
+        max-width: 250px;
+        padding: 8px 15px;
+    }
+}

@@ -1,0 +1,153 @@
+
+body {
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header.hd1 {
+    background-color: #111;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 40px;
+}
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 4px;
+    will-change: transform, background-color;
+}
+
+.menu a:hover {
+    background-color: rgb(255, 177, 32);
+    color: black;
+    transform: translateY(-2px);
+}
+
+main.mn1 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guide-container {
+    background: #222;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 100%;
+}
+
+.video-container {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Proporção 16:9 */
+    margin-bottom: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.guide-content h2 {
+    color: #f7931a;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.guide-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 15px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        transform: translateY(-150%);
+        transition: transform 0.4s ease-out;
+        z-index: 15;
+        display: none;
+    }
+
+    .menu.active {
+        transform: translateY(0);
+        display: flex;
+    }
+
+    .menu a {
+        width: 80%;
+        text-align: center;
+        padding: 12px 0;
+        border-radius: 5px;
+    }
+
+    .guide-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .guide-content h2 {
+        font-size: 1.5em;
+    }
+
+    .guide-content p {
+        font-size: 1em;
+    }
+}

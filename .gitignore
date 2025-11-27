@@ -1,0 +1,35 @@
+# ---------------------------------------------------------------- #
+# Arquivos de Sistema e IDEs (Gerais)
+# ---------------------------------------------------------------- #
+.DS_Store
+*.log
+*.tmp
+.vscode/
+
+# ---------------------------------------------------------------- #
+# Java / Arquivos Compilados (Classes)
+# ---------------------------------------------------------------- #
+# Ignorar todos os arquivos de classe gerados pelo compilador Java
+*.class
+
+# ---------------------------------------------------------------- #
+# Arquivos de Runtime e Persistência do Projeto (CSV/Dados)
+# ---------------------------------------------------------------- #
+# O servidor bancodedados.java cria a pasta 'data' e os arquivos DB.
+# Estes arquivos contêm dados gerados em tempo de execução (usuários, histórico)
+# e NÃO devem ser versionados.
+data/
+*.csv
+
+# Se o servidor Java estiver gerando arquivos btc_prices.csv ou users_db.csv 
+# fora da pasta 'data/' (embora seu código indique que estão dentro),
+# você pode ignorá-los explicitamente:
+btc_prices.csv
+users_db.csv
+
+# ---------------------------------------------------------------- #
+# Dependências do Frontend (Se houverem)
+# ---------------------------------------------------------------- #
+# Se você tiver usado npm/Node.js para baixar o Chart.js ou outras bibliotecas:
+node_modules/
+npm-debug.log

@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header.hd1 {
+    background-color: #111;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 40px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 4px;
+    will-change: transform, background-color;
+}
+
+.menu a:hover {
+    background-color: rgb(255, 177, 32);
+    color: black;
+    transform: translateY(-2px);
+}
+
+main.mn1 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px);
+}
+
+.contact-container {
+    background: #222;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.contact-title {
+    color: #f7931a;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 177, 32, 0.1);
+    border: 1px solid rgba(255, 177, 32, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: #f7931a;
+    color: #111;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(247, 147, 26, 0.3);
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 15px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        transform: translateY(-150%);
+        transition: transform 0.4s ease-out;
+        z-index: 15;
+        display: none;
+    }
+
+    .menu.active {
+        transform: translateY(0);
+        display: flex;
+    }
+
+    .menu a {
+        width: 80%;
+        text-align: center;
+        padding: 12px 0;
+        border-radius: 5px;
+        font-size: 1.2em;
+    }
+
+    .contact-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-link {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+}
